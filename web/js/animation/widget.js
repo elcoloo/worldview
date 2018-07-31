@@ -55,7 +55,7 @@ export function animationWidget (models, config, ui) {
     );
     $timelineFooter = $('#timeline-footer');
     $animateButton.on('click', function () {
-      googleAnalytics.event('Animation', 'Click', 'Animation Icon');
+      // googleAnalytics.event('Animation', 'Click', 'Animation Icon');
       self.toggleAnimationWidget();
     });
     if (model.rangeState.state === 'on') { // show animation widget if active in permalink

@@ -167,7 +167,7 @@ export default function (models, ui, config) {
 
     var onStop = function (index, tip, button) {
       setTourState();
-      googleAnalytics.event('Tour', 'Click', 'Post Tour View', index + 1);
+      // googleAnalytics.event('Tour', 'Click', 'Post Tour View', index + 1);
       if (index === 5 && button === false) {
         endTour();
       }
@@ -181,7 +181,7 @@ export default function (models, ui, config) {
       $('.ui-dialog-content')
         .dialog('close');
       initTourState();
-      googleAnalytics.event('Tour', 'Click', 'Take Tour');
+      // googleAnalytics.event('Tour', 'Click', 'Take Tour');
       $('#joyRideTipContent')
         .joyride({
           autoStart: true,

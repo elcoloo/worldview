@@ -251,7 +251,7 @@ export function layersSidebar(models, config) {
     if (tab === 'active') {
       $('.ui-tabs-nav li.first').addClass('ui-state-active');
     } else if (tab === 'events') {
-      googleAnalytics.event('Natural Events', 'Click', 'Events Tab');
+      // googleAnalytics.event('Natural Events', 'Click', 'Events Tab');
       $('.ui-tabs-nav li.second').addClass('ui-state-active');
     } else if (tab === 'download') {
       $('.ui-tabs-nav li.third').addClass('ui-state-active');

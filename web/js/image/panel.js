@@ -340,7 +340,7 @@ export function imagePanel (models, ui, config, dialogConfig) {
     });
 
     dlURL = createDownloadURL(models.date.selected, lonlats, models.proj.selected.epsg, products, imageUtilGetLayerOpacities(products), url);
-    googleAnalytics.event('Image Download', 'Click', 'Download');
+    // googleAnalytics.event('Image Download', 'Click', 'Download');
     util.metrics('lc=' + encodeURIComponent(dlURL + '&worldfile=' + imgWorldfile + '&format=' + imgFormat + '&width=' + imgWidth + '&height=' + imgHeight));
     window.open(dlURL + '&worldfile=' + imgWorldfile + '&format=' + imgFormat + '&width=' + imgWidth + '&height=' + imgHeight, '_blank');
   };

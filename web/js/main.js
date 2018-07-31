@@ -1,7 +1,7 @@
 import 'babel-polyfill'; // Needed for worldview-components in IE and older browsers
 import $ from 'jquery';
 import lodashEach from 'lodash/each';
-import { GA as googleAnalytics } from 'worldview-components';
+import { GA as googleAnalytics, GTM as googleTagManager } from 'worldview-components';
 
 // Utils
 import util from './util/util';
@@ -207,8 +207,11 @@ window.onload = () => {
       .register(models.palettes)
       .register(models.map);
     models.link.load(state);
-    if (config.features.googleAnalytics) {
-      googleAnalytics.init(config.features.googleAnalytics.id); // Insert google tracking
+    // if (config.features.googleAnalytics) {
+    //   googleAnalytics.init(config.features.googleAnalytics.id); // Insert google tracking
+    // }
+    if (config.features.googleTagManager) {
+      googleTagManager.init(config.features.googleTagManager.id); // Insert google tag manager
     }
     // HACK: Map needs to be created before the data download model
     var mapComponents = {

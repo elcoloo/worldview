@@ -366,7 +366,7 @@ export function dataUi(models, ui, config) {
   };
 
   var showDownloadList = function () {
-    GoogleAnalytics.event('Data Download', 'Click', 'Download Button');
+    // GoogleAnalytics.event('Data Download', 'Click', 'Download Button');
     if (selectionListPanel) {
       selectionListPanel.setVisible(false);
     }

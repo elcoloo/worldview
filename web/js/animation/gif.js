@@ -376,7 +376,7 @@ export function animationGif(models, config, ui) {
       });
       return;
     }
-    googleAnalytics.event('Animation', 'Click', 'Create GIF');
+    // googleAnalytics.event('Animation', 'Click', 'Create GIF');
     self.createGIF();
   };
 
@@ -576,7 +576,7 @@ export function animationGif(models, config, ui) {
         .click(function(e) {
           e.preventDefault();
           FileSaver.saveAs(blob, dlURL);
-          googleAnalytics.event('Animation', 'Download', 'GIF', downloadSize);
+          // googleAnalytics.event('Animation', 'Download', 'GIF', downloadSize);
         });
 
       var $catalog =

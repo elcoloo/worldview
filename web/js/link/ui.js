@@ -37,7 +37,7 @@ export function linkUi(models, config) {
       .click(function () {
         var checked = $('#wv-link-button-check')
           .prop('checked');
-        googleAnalytics.event('Link', 'Click', 'Share link Button');
+        // googleAnalytics.event('Link', 'Click', 'Share link Button');
         if (checked) {
           self.show();
         } else {
@@ -217,7 +217,7 @@ export function linkUi(models, config) {
           .prop('checked');
         if (checked) {
           var promise = models.link.shorten();
-          googleAnalytics.event('Link', 'Check', 'Shorten');
+          // googleAnalytics.event('Link', 'Check', 'Shorten');
           $('#permalink_content')
             .val('Please wait...');
           promise.done(function (result) {
@@ -234,7 +234,7 @@ export function linkUi(models, config) {
         } else {
           $('#permalink_content')
             .val(models.link.get());
-          googleAnalytics.event('Link', 'Check', 'Lengthen');
+          // googleAnalytics.event('Link', 'Check', 'Lengthen');
         }
         $('#permalink_content')
           .focus();
