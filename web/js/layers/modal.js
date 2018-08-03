@@ -4,7 +4,8 @@ import 'jquery-ui/accordion';
 import 'jquery-ui/button';
 import 'jquery-ui/tabs';
 import 'icheck';
-import 'isotope-layout';
+import jQueryBridget from 'jquery-bridget';
+import Isotope from 'isotope-layout';
 import 'perfect-scrollbar/jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -34,6 +35,9 @@ export function layersModal(models, ui, config) {
   var sizeMultiplier;
   var searchBool;
   var hasMeasurement;
+
+  // bridge isotope method onto jQuery for webpack
+  jQueryBridget('isotope', Isotope, $);
 
   var getLayersForProjection = function (projection) {
     var filteredLayers = lodashValues(config.layers).filter(function (layer) {
