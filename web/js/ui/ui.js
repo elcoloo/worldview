@@ -3,13 +3,13 @@ import 'jquery-ui/dialog';
 import 'jquery-ui/menu';
 import 'jquery-ui/position';
 import loadingIndicator from './indicator';
-import info from './info';
+import uiInfo from './info';
 import mouse from './mouse';
 
 export default (function (self) {
   // Export other ui methods
   self.loadingIndicator = loadingIndicator;
-  self.info = info;
+  self.info = uiInfo;
   self.mouse = mouse;
   /**
    * General error handler.
